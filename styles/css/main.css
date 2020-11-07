@@ -308,9 +308,104 @@ template {
 ::before {
   box-sizing: border-box; }
 
+html,
+body {
+  overflow: hidden; }
+
 body {
   font-family: "Inter", sans-serif;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: url(../../images/pattern-curve.svg) no-repeat left bottom/80%; }
+  @media screen and (min-width: 48em) {
+    body {
+      background-size: 60%; } }
+  @media screen and (min-width: 75em) {
+    body {
+      background-size: 610px 153.95px;
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+
+p {
+  margin: 0; }
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer; }
 
 .container {
-  max-width: 1100px; }
+  max-width: 1100px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.profile {
+  --img-width: 254px;
+  --img-height: 253px;
+  --column-setting: 1fr;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: var(--column-setting);
+  row-gap: 2.5rem;
+  margin-top: 2rem; }
+  .profile-img-container {
+    position: relative;
+    width: 20.4375rem;
+    height: 19.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../../../images/pattern-bg.svg") no-repeat 0 top/contain; }
+    .profile-img-container .profile-img-switcher {
+      position: absolute;
+      bottom: 0;
+      background-color: white;
+      border-radius: 28px;
+      width: 80px;
+      height: 40px;
+      box-shadow: 0 15px 20px -10px rgba(36, 36, 113, 0.1);
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+  .profile_img {
+    width: var(--img-width);
+    height: var(--img-height);
+    border-radius: 4px;
+    margin-top: 1.9rem; }
+
+.profile_info {
+  --description-width: 311px;
+  --description-size: 18px;
+  --description-lh: 24px;
+  background: url(../../../images/pattern-quotes.svg) no-repeat center top/60px; }
+  .profile_info_description {
+    font-size: var(--description-size);
+    font-weight: 300;
+    color: #202046;
+    margin-bottom: 1.1875rem;
+    line-height: var(--description-lh);
+    margin-top: 1.5rem;
+    width: var(--description-width);
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (min-width: 75em) {
+      .profile_info_description {
+        width: 635px;
+        text-align: left; } }
+
+.profile_name_main {
+  color: #202046;
+  font-size: rem(15px);
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  margin-right: 0.625rem; }
+  @media screen and (min-width: 62em) {
+    .profile_name_main {
+      font-size: rem(20px); } }
+
+.profile_name_title {
+  color: #babacf;
+  font-weight: 500; }

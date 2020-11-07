@@ -3,7 +3,29 @@
 ::before {
     box-sizing: border-box;
 }
+html,
+body {
+    overflow: hidden;
+}
 body {
     font-family: $family;
     min-height: 100vh;
+    background: url(../../images/pattern-curve.svg) no-repeat left bottom/80%;
+    @include from(medium) {
+        background-size: 60%;
+    }
+    @include from(x-large) {
+        background-size: 610px 153.95px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+p {
+    margin: 0;
+}
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
 }

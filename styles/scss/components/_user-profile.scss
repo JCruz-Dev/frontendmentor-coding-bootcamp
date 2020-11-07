@@ -1,0 +1,81 @@
+.profile {
+    --img-width: 254px;
+    --img-height: 253px;
+    --column-setting: 1fr;
+    &-img-container {
+        position: relative;
+        width: rem(327px);
+        height: rem(308px);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url('../../../images/pattern-bg.svg') no-repeat 0
+            top/contain;
+        .profile-img-switcher {
+            position: absolute;
+            bottom: 0;
+            background-color: white;
+            border-radius: 28px;
+            width: 80px;
+            height: 40px;
+            box-shadow: 0 15px 20px -10px rgba($color: #242471, $alpha: 0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+    &_img {
+        width: var(--img-width);
+        height: var(--img-height);
+        border-radius: 4px;
+        margin-top: 1.9rem;
+    }
+
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: var(--column-setting);
+    row-gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.profile_info {
+    --description-width: 311px;
+    --description-size: 18px;
+    --description-lh: 24px;
+    background: url(../../../images/pattern-quotes.svg) no-repeat center top /
+        60px;
+    &_description {
+        font-size: var(--description-size);
+        font-weight: $light-weight;
+        color: $dark-blue;
+        margin-bottom: rem(19px);
+        line-height: var(--description-lh);
+        margin-top: 1.5rem;
+        width: var(--description-width);
+        margin-left: auto;
+        margin-right: auto;
+        @include from(x-large) {
+            width: 635px;
+            text-align: left;
+        }
+    }
+}
+.profile_name {
+    &_main {
+        color: $dark-blue;
+        font-size: $small-font;
+        margin-bottom: 0.2rem;
+        font-weight: $bold-weight;
+        margin-right: rem(10px);
+        @include from(large) {
+            font-size: $medium-font;
+        }
+    }
+    &_title {
+        color: $grayish-blue;
+        font-weight: $medium-weight;
+    }
+}
