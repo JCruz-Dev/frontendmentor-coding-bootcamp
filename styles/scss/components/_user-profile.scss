@@ -10,8 +10,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: url('../../../images/pattern-bg.svg') no-repeat 0
-            top/contain;
         .profile-img-switcher {
             position: absolute;
             bottom: 0;
@@ -30,6 +28,12 @@
         height: var(--img-height);
         border-radius: 4px;
         margin-top: 1.9rem;
+        z-index: -1;
+    }
+    &_img_bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
     }
 
     text-align: center;
@@ -39,20 +43,58 @@
     grid-template-columns: var(--column-setting);
     row-gap: 2.5rem;
     margin-top: 2rem;
+
+    @include from(x-large) {
+        margin-top: 0;
+        --column-setting: 1fr 1fr;
+        row-gap: 0;
+        --img-width: 540px;
+        --img-height: 540px;
+        &-img-container {
+            order: 2;
+            height: auto;
+            background-size: cover;
+        }
+        &_img {
+            margin-top: 0;
+        }
+        &_img_bg {
+            bottom: -55px;
+            width: auto;
+            left: -53%;
+        }
+        .profile-img-switcher {
+            width: rem(112px);
+            height: rem(56px);
+            bottom: -25px;
+            left: -52px;
+            .prev img,
+            .next img {
+                width: 12px;
+            }
+        }
+    }
+}
+.profile-images {
+    display: flex;
 }
 
 .profile_info {
     --description-width: 311px;
-    --description-size: 18px;
-    --description-lh: 24px;
-    background: url(../../../images/pattern-quotes.svg) no-repeat center top /
-        60px;
+    background-image: url(../../../images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 60px;
+    @include from(x-large) {
+        background-position: 90px top;
+        background-size: 120px;
+    }
     &_description {
-        font-size: var(--description-size);
+        font-size: $normal-font;
         font-weight: $light-weight;
         color: $dark-blue;
+        line-height: $small-lineheight;
         margin-bottom: rem(19px);
-        line-height: var(--description-lh);
         margin-top: 1.5rem;
         width: var(--description-width);
         margin-left: auto;
@@ -60,6 +102,10 @@
         @include from(x-large) {
             width: 635px;
             text-align: left;
+            font-size: $big-font;
+            line-height: $big-lineheight;
+            margin-top: 4rem;
+            margin-bottom: 0;
         }
     }
 }
@@ -70,12 +116,21 @@
         margin-bottom: 0.2rem;
         font-weight: $bold-weight;
         margin-right: rem(10px);
-        @include from(large) {
-            font-size: $medium-font;
-        }
     }
     &_title {
         color: $grayish-blue;
-        font-weight: $medium-weight;
+    }
+    @include from(x-large) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &_main {
+            margin-bottom: 0;
+        }
+        &_main,
+        &_title {
+            font-size: $medium-font;
+        }
+        margin-top: 2rem;
     }
 }

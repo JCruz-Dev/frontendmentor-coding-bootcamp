@@ -13,13 +13,17 @@ $medium-weight: 500;
 $bold-weight: 700;
 
 // Font sizes
-$big-font: rem(32px);
-$medium-font: rem(20px);
-$normal-font: rem(18px);
-$small-font: rem(15px);
+$big-font: 2rem;
+$medium-font: 1.25rem;
+$normal-font: 1.125rem;
+$small-font: 0.9375rem;
 //Width
 $max-width: 1100px;
 
 //Colors
 $dark-blue: hsl(240, 38%, 20%);
 $grayish-blue: hsl(240, 18%, 77%);
+
+// Line Height
+$small-lineheight: 24px;
+$big-lineheight: 44px;
