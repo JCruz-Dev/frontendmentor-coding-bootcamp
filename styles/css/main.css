@@ -425,7 +425,7 @@ button {
   background-size: 60px; }
   @media screen and (min-width: 75em) {
     .profile_info {
-      background-position: 90px top;
+      background-position: 95px top;
       background-size: 120px; } }
   .profile_info_description {
     font-size: 1.125rem;
