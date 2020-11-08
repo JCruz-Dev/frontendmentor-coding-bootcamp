@@ -426,13 +426,13 @@ button {
   background-image: url(../../../images/pattern-quotes.svg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 60px;
-  transition: opacity var(--animation-delay) ease-in-out; }
+  background-size: 60px; }
   @media screen and (min-width: 75em) {
     .profile_info {
       background-position: 95px top;
       background-size: 120px; } }
   .profile_info_description {
+    transition: opacity var(--animation-delay) ease-in-out;
     font-size: 1.125rem;
     font-weight: 300;
     color: #202046;
@@ -449,28 +449,29 @@ button {
         font-size: 2rem;
         line-height: 44px;
         margin-top: 4rem;
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        height: 240px; } }
 
-.profile_name_main {
-  color: #202046;
-  font-size: 0.9375rem;
-  margin-bottom: 0.2rem;
-  font-weight: 700;
-  margin-right: 0.625rem; }
-
-.profile_name_title {
-  color: #babacf; }
-
-@media screen and (min-width: 75em) {
-  .profile_name {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 2rem; }
-    .profile_name_main {
-      margin-bottom: 0; }
-    .profile_name_main, .profile_name_title {
-      font-size: 1.25rem; } }
+.profile_name {
+  transition: opacity var(--animation-delay) ease-in-out; }
+  .profile_name_main {
+    color: #202046;
+    font-size: 0.9375rem;
+    margin-bottom: 0.2rem;
+    font-weight: 700;
+    margin-right: 0.625rem; }
+  .profile_name_title {
+    color: #babacf; }
+  @media screen and (min-width: 75em) {
+    .profile_name {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 2rem; }
+      .profile_name_main {
+        margin-bottom: 0; }
+      .profile_name_main, .profile_name_title {
+        font-size: 1.25rem; } }
 
 .hide {
   opacity: 0; }
