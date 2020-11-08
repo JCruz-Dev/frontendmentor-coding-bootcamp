@@ -27,6 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
     userTitle.innerHTML = data[slide].title;
     userDescription.innerHTML = data[slide].description
 })
+document.addEventListener('keydown', (e) => {
+    if(e.keyCode === 37){
+        changeUserInfo("0", "0")
+    }
+    else if(e.keyCode === 39){
+        changeUserInfo("1", "1")
+    }
+})
 function changeUserInfo(sliderInfo, setSlider){
     //Only execute animation if the data attribute is different
     if(slideContainer.dataset.slide !== sliderInfo){
@@ -45,6 +53,7 @@ function changeUserInfo(sliderInfo, setSlider){
 }
 prevtButton.addEventListener('click', () => {
     changeUserInfo("0", "0")
+    
 })
 nextButton.addEventListener('click', () => {
     changeUserInfo("1", "1")
