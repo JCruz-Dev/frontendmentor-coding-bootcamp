@@ -2,10 +2,11 @@
 ::after,
 ::before {
     box-sizing: border-box;
+    outline: none;
 }
 html,
 body {
-    // overflow: hidden;
+    overflow: hidden;
 }
 body {
     font-family: $family;
@@ -19,6 +20,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 }
 p {

@@ -306,7 +306,12 @@ template {
 *,
 ::after,
 ::before {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
+
+html,
+body {
+  overflow: hidden; }
 
 body {
   font-family: "Inter", sans-serif;
@@ -320,7 +325,8 @@ body {
       background-size: 35%;
       display: flex;
       justify-content: center;
-      align-items: center; } }
+      align-items: center;
+      flex-direction: column; } }
 
 p {
   margin: 0; }
@@ -334,6 +340,13 @@ button {
   max-width: 1100px;
   padding-left: 15px;
   padding-right: 15px; }
+
+.attribution {
+  text-align: center;
+  margin-top: 3rem; }
+  @media screen and (min-width: 75em) {
+    .attribution {
+      text-align: left; } }
 
 .profile {
   --img-width: 254px;
@@ -431,7 +444,8 @@ button {
         font-size: 2rem;
         line-height: 44px;
         margin-top: 4rem;
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        height: 290px; } }
 
 .profile_name_main {
   color: #202046;
