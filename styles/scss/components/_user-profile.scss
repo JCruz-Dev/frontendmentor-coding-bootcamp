@@ -89,12 +89,12 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 60px;
-    transition: opacity var(--animation-delay) ease-in-out;
     @include from(x-large) {
         background-position: 95px top;
         background-size: 120px;
     }
     &_description {
+        transition: opacity var(--animation-delay) ease-in-out;
         font-size: $normal-font;
         font-weight: $light-weight;
         color: $dark-blue;
@@ -111,10 +111,12 @@
             line-height: $big-lineheight;
             margin-top: 4rem;
             margin-bottom: 0;
+            height: 240px;
         }
     }
 }
 .profile_name {
+    transition: opacity var(--animation-delay) ease-in-out;
     &_main {
         color: $dark-blue;
         font-size: $small-font;

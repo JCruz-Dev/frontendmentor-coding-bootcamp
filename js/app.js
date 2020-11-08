@@ -5,7 +5,7 @@ let userDescription = document.querySelector('.profile_info_description');
 let userName = document.querySelector('.profile_name_main');
 let userTitle =  document.querySelector('.profile_name_title');
 let slideContainer = document.querySelector('.profile-img-container');
-let userProfileInfo = document.querySelector('.profile_info');
+let userProfileName = document.querySelector('.profile_name');
 let slide = parseInt(slideContainer.dataset.slide);
 let data = [
     {
@@ -40,14 +40,16 @@ function changeUserInfo(sliderInfo, setSlider){
     if(slideContainer.dataset.slide !== sliderInfo){
         slideContainer.dataset.slide = setSlider;
         userImage.classList.add('hide');
-        userProfileInfo.classList.add('hide');
+        userDescription.classList.add('hide');
+        userProfileName.classList.add('hide');
         setTimeout(() => {
         userImage.src = data[setSlider].image;
         userName.innerHTML = data[setSlider].name;
         userTitle.innerHTML = data[setSlider].title;
         userDescription.innerHTML = data[setSlider].description;
         userImage.classList.remove('hide');
-        userProfileInfo.classList.remove('hide');
+        userDescription.classList.remove('hide');
+        userProfileName.classList.remove('hide')
     }, 500)
     }
 }
