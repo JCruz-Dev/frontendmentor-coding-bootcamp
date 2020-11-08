@@ -24,6 +24,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            transition: all 0.3s ease-in-out;
         }
     }
     &_img {
@@ -47,6 +48,11 @@
     grid-template-columns: var(--column-setting);
     row-gap: 2.5rem;
     margin-top: 2rem;
+    .icon-prev,
+    .icon-next {
+        width: 15px;
+        height: 14px;
+    }
 
     @include from(x-large) {
         margin-top: 0;
@@ -72,9 +78,33 @@
             height: rem(56px);
             bottom: -25px;
             left: -52px;
-            .prev img,
-            .next img {
-                width: 12px;
+            .prev,
+            .next {
+                height: inherit;
+                width: 100%;
+            }
+            .prev {
+                border-top-left-radius: 28px;
+                border-bottom-left-radius: 28px;
+            }
+            .next {
+                border-top-right-radius: 28px;
+                border-bottom-right-radius: 28px;
+            }
+            .prev:hover,
+            .next:hover {
+                background: $dark-blue;
+                .icon-prev,
+                .icon-next {
+                    path {
+                        stroke: white;
+                    }
+                }
+            }
+            .icon-prev,
+            .icon-next {
+                width: 20px;
+                height: 20px;
             }
         }
     }
