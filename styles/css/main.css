@@ -348,6 +348,9 @@ button {
     .attribution {
       text-align: left; } }
 
+:root {
+  --animation-delay: 0.3s; }
+
 .profile {
   --img-width: 254px;
   --img-height: 253px;
@@ -383,7 +386,8 @@ button {
     height: var(--img-height);
     border-radius: 4px;
     margin-top: 1.9rem;
-    z-index: -1; }
+    z-index: -1;
+    transition: opacity var(--animation-delay) ease-in-out; }
   .profile_img_bg {
     position: absolute;
     z-index: -1;
@@ -422,7 +426,8 @@ button {
   background-image: url(../../../images/pattern-quotes.svg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 60px; }
+  background-size: 60px;
+  transition: opacity var(--animation-delay) ease-in-out; }
   @media screen and (min-width: 75em) {
     .profile_info {
       background-position: 95px top;
@@ -444,8 +449,7 @@ button {
         font-size: 2rem;
         line-height: 44px;
         margin-top: 4rem;
-        margin-bottom: 0;
-        height: 290px; } }
+        margin-bottom: 0; } }
 
 .profile_name_main {
   color: #202046;
@@ -467,3 +471,6 @@ button {
       margin-bottom: 0; }
     .profile_name_main, .profile_name_title {
       font-size: 1.25rem; } }
+
+.hide {
+  opacity: 0; }

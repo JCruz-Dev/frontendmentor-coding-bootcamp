@@ -1,3 +1,6 @@
+:root {
+    --animation-delay: 0.3s;
+}
 .profile {
     --img-width: 254px;
     --img-height: 253px;
@@ -29,6 +32,7 @@
         border-radius: 4px;
         margin-top: 1.9rem;
         z-index: -1;
+        transition: opacity var(--animation-delay) ease-in-out;
     }
     &_img_bg {
         position: absolute;
@@ -85,6 +89,7 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 60px;
+    transition: opacity var(--animation-delay) ease-in-out;
     @include from(x-large) {
         background-position: 95px top;
         background-size: 120px;
@@ -106,7 +111,6 @@
             line-height: $big-lineheight;
             margin-top: 4rem;
             margin-bottom: 0;
-            height: 290px;
         }
     }
 }
@@ -134,4 +138,7 @@
         }
         margin-top: 2rem;
     }
+}
+.hide {
+    opacity: 0;
 }

@@ -5,6 +5,7 @@ let userDescription = document.querySelector('.profile_info_description');
 let userName = document.querySelector('.profile_name_main');
 let userTitle =  document.querySelector('.profile_name_title');
 let slideContainer = document.querySelector('.profile-img-container');
+let userProfileInfo = document.querySelector('.profile_info');
 let slide = parseInt(slideContainer.dataset.slide);
 let data = [
     {
@@ -26,19 +27,25 @@ document.addEventListener('DOMContentLoaded', () => {
     userTitle.innerHTML = data[slide].title;
     userDescription.innerHTML = data[slide].description
 })
-
+function changeUserInfo(sliderInfo, setSlider){
+    //Only execute animation if the data attribute is different
+    if(slideContainer.dataset.slide !== sliderInfo){
+        slideContainer.dataset.slide = setSlider;
+        userImage.classList.add('hide');
+        userProfileInfo.classList.add('hide');
+        setTimeout(() => {
+        userImage.src = data[setSlider].image;
+        userName.innerHTML = data[setSlider].name;
+        userTitle.innerHTML = data[setSlider].title;
+        userDescription.innerHTML = data[setSlider].description;
+        userImage.classList.remove('hide');
+        userProfileInfo.classList.remove('hide');
+    }, 500)
+    }
+}
 prevtButton.addEventListener('click', () => {
-    slideContainer.dataset.slide = "0";
-    userImage.src = data[0].image;
-    userName.innerHTML = data[0].name;
-    userTitle.innerHTML = data[0].title;
-    userDescription.innerHTML = data[0].description
+    changeUserInfo("0", "0")
 })
 nextButton.addEventListener('click', () => {
-    slideContainer.dataset.slide = "1";
-    userImage.src = data[1].image;
-    userTitle.innerHTML = data[1].title;
-    userName.innerHTML = data[1].name;
-    userDescription.innerHTML = data[1].description
-  
+    changeUserInfo("1", "1")
 })
