@@ -28,6 +28,7 @@
         }
     }
     &_img {
+        object-fit: cover;
         width: var(--img-width);
         height: var(--img-height);
         border-radius: 4px;

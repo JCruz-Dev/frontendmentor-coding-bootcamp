@@ -384,6 +384,7 @@ button {
       align-items: center;
       transition: all 0.3s ease-in-out; }
   .profile_img {
+    object-fit: cover;
     width: var(--img-width);
     height: var(--img-height);
     border-radius: 4px;
