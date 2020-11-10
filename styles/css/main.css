@@ -410,7 +410,8 @@ button {
         height: auto;
         background-size: cover; }
       .profile_img {
-        margin-top: 0; }
+        margin-top: 0;
+        object-fit: cover; }
       .profile_img_bg {
         bottom: -55px;
         width: auto;
@@ -448,6 +449,8 @@ button {
 
 .profile_info {
   --description-width: 311px;
+  position: relative;
+  height: 280px;
   background-image: url(../../../images/pattern-quotes.svg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -474,8 +477,7 @@ button {
         font-size: 2rem;
         line-height: 44px;
         margin-top: 4rem;
-        margin-bottom: 0;
-        height: 240px; } }
+        margin-bottom: 2rem; } }
 
 .profile_name {
   transition: opacity var(--animation-delay) ease-in-out; }
@@ -491,8 +493,7 @@ button {
     .profile_name {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      margin-top: 2rem; }
+      justify-content: flex-start; }
       .profile_name_main {
         margin-bottom: 0; }
       .profile_name_main, .profile_name_title {

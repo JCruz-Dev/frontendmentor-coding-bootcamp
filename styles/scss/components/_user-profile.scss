@@ -67,6 +67,7 @@
         }
         &_img {
             margin-top: 0;
+            object-fit: cover;
         }
         &_img_bg {
             bottom: -55px;
@@ -115,6 +116,8 @@
 
 .profile_info {
     --description-width: 311px;
+    position: relative;
+    height: 280px;
     background-image: url(../../../images/pattern-quotes.svg);
     background-repeat: no-repeat;
     background-position: center top;
@@ -140,8 +143,7 @@
             font-size: $big-font;
             line-height: $big-lineheight;
             margin-top: 4rem;
-            margin-bottom: 0;
-            height: 240px;
+            margin-bottom: 2rem;
         }
     }
 }
@@ -168,7 +170,6 @@
         &_title {
             font-size: $medium-font;
         }
-        margin-top: 2rem;
     }
 }
 .hide {
