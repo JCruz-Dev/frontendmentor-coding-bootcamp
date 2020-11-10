@@ -4,9 +4,7 @@ let userImage = document.querySelector('.profile_img');
 let userDescription = document.querySelector('.profile_info_description');
 let userName = document.querySelector('.profile_name_main');
 let userTitle =  document.querySelector('.profile_name_title');
-let slideContainer = document.querySelector('.profile-img-container');
 let userProfileName = document.querySelector('.profile_name');
-// let slide = parseInt(slideContainer.dataset.slide);
 let index = 0;
 let data = [
     {
