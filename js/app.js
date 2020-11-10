@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 document.addEventListener('keydown', (e) => {
     if(e.keyCode === 37){
-        changeUserInfo()
+        changeUserInfo('desc')
     }
     else if(e.keyCode === 39){
-        changeUserInfo()
+        changeUserInfo('asc')
     }
 })
 function displayData(index){
